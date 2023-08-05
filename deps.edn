@@ -2,7 +2,7 @@
  :paths   ["src"]
  :deps    {
            org.clojure/clojure {:mvn/version "1.11.1"}
-           com.cleancoders.speclj-junit-xml/speclj-junit-xml  {:git/url "https://github.com/cleancoders/speclj-junit-xml" :git/sha "2f89ad76eaf02306500afd0b5344843cb469f78c"}
+           com.cleancoders.speclj-junit-xml/speclj-junit-xml  {:git/url "https://github.com/cleancoders/speclj-junit-xml" :git/sha "e2200b80b331be5c58c6a586dea44d3a8ea88ffc"}
            }
  :aliases {
            :test {:extra-deps  {
