@@ -8,7 +8,7 @@ jobs:
       - run:
           name: Run Specs
           command: |
-            clojure -M:test:spec -f junit-xml-reporter > spec_results.xml
+            clojure -M:test:spec -f junit-xml-reporter
       - run:
           name: Review Spec Results
           command: |
