@@ -12,3 +12,7 @@ jobs:
     steps:
       - checkout
       - run_specs
+      - run:
+          name: Spit Test Results
+          command: |
+            cat spec_results.xml
