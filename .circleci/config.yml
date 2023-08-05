@@ -4,6 +4,7 @@ jobs:
     docker:
       - image: clojure:tools-deps
     steps:
+      - checkout
       - run:
           name: The First Step
           command: |
