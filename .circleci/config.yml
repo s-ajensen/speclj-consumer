@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: clojure:temurin-8-tools-deps
+      - image: clojure:latest
     steps:
       - checkout
       - run:
