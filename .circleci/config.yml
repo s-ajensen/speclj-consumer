@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: clojure:temurin-20-alpine
+      - image: clojure:temurin-8-boot-bullseye
     steps:
       - checkout
       - run:
