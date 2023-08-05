@@ -6,8 +6,12 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run specs
+          name: Run Specs
           command: |
             clojure -M:test:spec -f junit-xml-reporter > spec_results.xml
+      - run:
+          name: Review Spec Results
+          command: |
+            cat ./spec_results.xml
       - store_test_results:
           path: ./spec_results.xml
