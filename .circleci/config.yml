@@ -1,14 +1,17 @@
 version: 2.1
+commands:
+  run_specs:
+    description: "run speclj tests"
+    steps:
+      - run: clojure -M:test:spec -f junit-xml-reporter
+
 jobs:
   build:
     docker:
       - image: cimg/clojure:1.11.1
     steps:
       - checkout
-      - run:
-          name: Run Specs
-          command: |
-            clojure -M:test:spec -f junit-xml-reporter
+      - run: run_specs | true
       - run:
           name: Review Spec Results
           command: |
