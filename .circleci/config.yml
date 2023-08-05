@@ -1,11 +1,14 @@
 version: 2.1
+commands:
+  run_specs:
+    description: "runs speclj and routes output to spec_results.xml"
+    steps:
+      - run: clojure -M:test:spec -f junit-xml-reporter > spec_results.xml
+
 jobs:
   build:
     docker:
       - image: clojure:tools-deps
     steps:
       - checkout
-      - run:
-          name: The First Step
-          command: |
-            clojure -M:test:spec -f junit-xml-reporter
+      - run_specs
