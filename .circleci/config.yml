@@ -5,6 +5,10 @@ jobs:
       - image: clojure:slim-bullseye
     steps:
       - checkout
+      -run:
+        name: Install Dependencies
+        command: |
+          sudo apt install bash curl rlwrap Java
       - run:
           name: Install Clojure
           command: |
