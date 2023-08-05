@@ -1,10 +1,3 @@
-(ns consumer.main
-  (:require [clojure.data.xml :as xml]))
+(ns consumer.main)
 
-(defn- main [& args]
-  (spit "out.xml"
-    "test"
-    #_(xml/sexp-as-element
-      [:foo {:foo-attr "foo value"}
-       [:bar {:bar-attr "bar value"}
-        [:baz {} "The baz value"]]])))
+(defn- main [& args])
