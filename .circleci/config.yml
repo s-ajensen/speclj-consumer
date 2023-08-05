@@ -8,9 +8,4 @@ jobs:
       - run:
           name: The First Step
           command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-            pwd
-            ls -al
-            cd ..
-            ls -al
+            clj -M:test:spec -f junit-xml-reporter
